@@ -1,4 +1,5 @@
   import 'package:flutter/material.dart';
+  import 'assets/properi.dart';
   
 
   void main() {
@@ -13,7 +14,7 @@
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: warnacustom.bjir,
+        backgroundColor: custcol.putih1,
         
     appBar: AppBar(
       title: Text(
@@ -30,33 +31,18 @@
 
         //Isi Aplikasi
        body: Container(
-          color: warnacustom.bjir,
+          color: custcol.putih1,
             padding: const EdgeInsets.only(top: 12, bottom: 12),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      width: 100,
-                      height: 60,
-                      color: Colors.blue,
-                      child: Center(child: Text("Bayar SPP", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),)),
-                    ),
-                    Container(
-                      width: 100,
-                      height: 60,
-                      color: Colors.blue,
-                      child: Center(child: Text("Bayar SPP", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),)),
-                    ),
-                    Container(
-                      width: 100,
-                      height: 60,
-                      color: Colors.blue,
-                      child: Center(child: Text("Bayar SPP", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),)),
-                    ),
+                    kontainer("Rekap SPP", ukuran: 16, warna: custcol.biru1 ),
 
-                    kontainer("Absensi", ukuran: 20, warna: const Color.fromARGB(255, 7, 7, 7)),
+                    kontainer("Absensi", ukuran: 20, warna: custcol.biru1),
+
+                    kontainer("Jurnal", ukuran: 17, warna: custcol.biru1),
                   ],
                 ),
 
@@ -74,10 +60,65 @@
                   ),
                 ),
 
+                SizedBox(height: 20,),
 
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+
+                    Container(
+                      color: custcol.biru1,
+                      width: double.infinity,
+                      height: 90,
+                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      child: Row(
+                        
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: AssetImage("lib/assets/gambar/gbr.jpg"),
+                                fit: BoxFit.cover,
+                              )
+                            ),
+                          ),
+
+                          SizedBox(width: 23,),
+
+                          //Kolom Judul
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "buku Pemrograman",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(height: 4,),
+                                Text(
+                                  "Ini Deskpripsi jadi kalian bisa isi deskripsi produk di sini",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                      
+                    )
 
                   ],
                 )
@@ -89,29 +130,30 @@
   }
 }
 
-class warnacustom {
-  static const Color bjir = Color(0xffbde0fe);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class custcol {
+  static const Color biruterang = Color(0xffbde0fe);
+  static const Color biru1 = Color(0xff415a77);
+  static const Color putih1 = Color(0xffaed9e0);
 }
 
-Widget kontainer(
-  String textjir, {
-    Color warna = Colors.blueAccent,
-    double ukuran = 17,
-  })
-  
-   {
-  return Container(
-    width: 100,
-    height: 60,
-    color: warna,
-    child: Center(
-      child: Text(
-        textjir,
-         style: TextStyle(
-          fontSize: ukuran,
-           fontWeight: FontWeight.bold,
-           color: Colors.white),
-        ),
-      ),
-  );
-}
+
+
