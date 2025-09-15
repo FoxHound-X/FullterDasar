@@ -43,6 +43,8 @@
                     kontainer("Absensi", ukuran: 20, warna: custcol.biru1),
 
                     kontainer("Jurnal", ukuran: 17, warna: custcol.biru1),
+
+                    kontainer("tugas", ukuran: 50),
                   ],
                 ),
 
@@ -65,60 +67,10 @@
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-
-                    Container(
-                      color: custcol.biru1,
-                      width: double.infinity,
-                      height: 90,
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                      child: Row(
-                        
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                image: AssetImage("lib/assets/gambar/gbr.jpg"),
-                                fit: BoxFit.cover,
-                              )
-                            ),
-                          ),
-
-                          SizedBox(width: 23,),
-
-                          //Kolom Judul
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "buku Pemrograman",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                SizedBox(height: 4,),
-                                Text(
-                                  "Ini Deskpripsi jadi kalian bisa isi deskripsi produk di sini",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      
-                    )
+                    SizedBox(height: 23,),
+                    cardbarang(judul: "Buku HTML", deskripsi: "BELAJAR HTML DASAR"),
+                    SizedBox(height: 23,),
+                    cardbarang(judul: "Buku HTML", deskripsi: "ANjirlah"),
 
                   ],
                 )
