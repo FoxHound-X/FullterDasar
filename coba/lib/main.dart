@@ -33,8 +33,10 @@
        body: Container(
           color: custcol.putih1,
             padding: const EdgeInsets.only(top: 12, bottom: 12),
-            child: Column(
+            child: SingleChildScrollView(
+              child:                Column(
               children: [
+                //Navbar
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -43,20 +45,22 @@
                     kontainer("Absensi", ukuran: 20, warna: custcol.biru1),
 
                     kontainer("Jurnal", ukuran: 17, warna: custcol.biru1),
-
-                    kontainer("tugas", ukuran: 50),
                   ],
                 ),
 
                 SizedBox(height: 14,),
 
+                //Gambar Utama
                 Container(
+                  margin: EdgeInsets.symmetric(horizontal: 16),
                   width: double.infinity,
                   height: 250,
                   decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(14),
                     color: Colors.blueAccent, // warna background
                     image: DecorationImage(
-                      image: AssetImage("lib/assets/gambar/gbr.jpg"), // gambar dari assets
+                      image: AssetImage("lib/assets/gambar/gambar2.jpg"), // gambar dari assets
                       fit: BoxFit.cover, // cover = isi penuh sesuai ukuran container
                     ),
                   ),
@@ -64,18 +68,41 @@
 
                 SizedBox(height: 20,),
 
+                //Card berita
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     SizedBox(height: 23,),
-                    cardbarang(judul: "Buku HTML", deskripsi: "BELAJAR HTML DASAR"),
+                    cardbarang(
+                      judul: "MPLS SMSR DAY 1", 
+                      deskripsi: "dalam rangka penerimaan siswa baru, SMK Negeri 1 sukawtai mengadakan acara yang bernama MPLS", 
+                      gambarproduk: "lib/assets/gambar/gambar2.jpg",
+                      ukurantitle: 22.4),
                     SizedBox(height: 23,),
-                    cardbarang(judul: "Buku HTML", deskripsi: "ANjirlah"),
-
+                    cardbarang(
+                      judul: "Buku HTML", 
+                      deskripsi: "ANjirlah",  
+                      gambarproduk: "lib/assets/gambar/gambar1.jpg",),
+                    SizedBox(height: 23,),
+                    cardbarang(
+                      judul: "Buku HTML", 
+                      deskripsi: "ANjirlah",  
+                      gambarproduk: "lib/assets/gambar/gambar1.jpg",),
+                    SizedBox(height: 23,),
+                    cardbarang(
+                      judul: "Buku HTML", 
+                      deskripsi: "ANjirlah",  
+                      gambarproduk: "lib/assets/gambar/gambar1.jpg",),
+                    SizedBox(height: 23,),
+                    cardbarang(
+                      judul: "Buku HTML", 
+                      deskripsi: "ANjirlah",  
+                      gambarproduk: "lib/assets/gambar/gambar1.jpg",),
                   ],
                 )
               ],
             ),
+          ),
         ),
       ),
     );
@@ -99,13 +126,27 @@
 
 
 
-
-
 class custcol {
   static const Color biruterang = Color(0xffbde0fe);
   static const Color biru1 = Color(0xff415a77);
   static const Color putih1 = Color(0xffaed9e0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

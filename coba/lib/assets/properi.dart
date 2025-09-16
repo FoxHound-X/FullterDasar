@@ -1,6 +1,7 @@
 import 'package:coba/main.dart';
 import 'package:flutter/material.dart';
 
+//Card 
 Widget kontainer(
   String textjir, {
     Color warna = Colors.blueAccent,
@@ -24,14 +25,18 @@ Widget kontainer(
   );
 }
 
+
+//Card barang 
 Widget cardbarang({
   required String judul,
   required String deskripsi,
+  required String gambarproduk,
+  double ukurantitle = 22,
 }) {
   return  Container(
     margin: EdgeInsets.symmetric(horizontal: 16),
     width: double.infinity,
-    height: 90,
+    height: 170,
     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 1),
     decoration: BoxDecoration(
       color: custcol.biru1,
@@ -41,13 +46,13 @@ Widget cardbarang({
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          width: 60,
-          height: 60,
+          width: 130,
+          height: 150,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
             image: DecorationImage(
-              image: AssetImage("lib/assets/gambar/gbr.jpg"),
+              image: AssetImage(gambarproduk),
               fit: BoxFit.cover,
             )
           ),
@@ -66,7 +71,7 @@ Widget cardbarang({
                 style: TextStyle(
                   fontFamily: "switzer",
                   fontWeight: FontWeight.bold,
-                  fontSize: 25,
+                  fontSize: ukurantitle,
                   color: Colors.white,
                 ),
               ),
